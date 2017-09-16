@@ -8,14 +8,22 @@
 
 import UIKit
 import CoreLocation
+import PebbleKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, PBPebbleCentralDelegate {
+    var connectedWatch: PBWatch = NSObject() as! PBWatch
+    
     var currNumShots: Int = 0
     var maxNumShots: Int = 0
     var orderUberEndpoint = "https://jsonplaceholder.typicode.com/posts"
+    
     var locationManager = CLLocationManager()
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+    
+    let myAppUUID = "72a2bcff-7318-487f-b784-1c4f3463ffb0"
+    var pebbleManager = PBPebbleCentral.default()
+    
     @IBOutlet var outputTextField: UILabel!
     
     func httpPost(endpoint: String, jsonData: Data) {
@@ -56,12 +64,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    // TODO: Call this when receive a signal from Pebble
-    //
-    //
-    //
     func onShotsCnt() {
-        self.currNumShots += 1
+        currNumShots += 1
         isShotsExceedLimit(numShots: currNumShots, maxShots: maxNumShots)
     }
     
@@ -75,7 +79,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             return
         }
         
-        self.maxNumShots = Int(DrinkLimitTextField.text!)!
+        maxNumShots = Int(DrinkLimitTextField.text!)!
         
         if (maxNumShots <= 0) {
             outputTextField.text = "Invalid shots limit."
@@ -83,7 +87,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         outputTextField.text = ""
-        onShotsCnt()
+        
     }
     
     func dismissKeyboard() {
@@ -96,15 +100,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         longitude = userLocation.coordinate.longitude
     }
     
+    func pebbleCentral(_ central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
+        print(watch.name)
+        connectedWatch = watch
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        pebbleManager.delegate = self
+        pebbleManager.appUUID = UUID.init(uuidString: myAppUUID)
+        pebbleManager.run()
     }
     
     override func didReceiveMemoryWarning() {
