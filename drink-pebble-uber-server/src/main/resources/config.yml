@@ -1,3 +1,12 @@
 uberClientId: FuXkqh3i8wLqH_lqdA2FjmZ3kHF31ox4
 uberServerToken: 68DFMWf1DFSnwq5Gk2Aytmlo_0d_E4_8JljhavRe
 uberSecret: jsawl3rs0z0z1m5JI4i97qYA44zJAXOjoRZA6otq
+serverUrl: 127.0.0.1 #ec2-34-214-3-186.us-west-2.compute.amazonaws.com
+
+server:
+    applicationConnectors:
+        - type: https
+          port: 8080
+          keyStorePath: keystore.jks
+          keyStorePassword: pebble
+          validateCerts: false
