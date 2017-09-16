@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		158309C06745C3DF0CA5B948 /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08253C22A15CA80DDE51272 /* PebbleKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1DCE61391F6D86F4007EFCE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCE61381F6D86F4007EFCE0 /* AppDelegate.swift */; };
 		1DCE613B1F6D86F4007EFCE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCE613A1F6D86F4007EFCE0 /* ViewController.swift */; };
 		1DCE613E1F6D86F4007EFCE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCE613C1F6D86F4007EFCE0 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		1DCE61421F6D86F4007EFCE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DCE61451F6D86F4007EFCE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DCE61471F6D86F4007EFCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527C98C89B8BC5BBB4685785 /* Pods-Drink My Pebble Companion App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drink My Pebble Companion App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Drink My Pebble Companion App/Pods-Drink My Pebble Companion App.debug.xcconfig"; sourceTree = "<group>"; };
+		D68033CC9A3C1AB059656995 /* Pods-Drink My Pebble Companion App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drink My Pebble Companion App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Drink My Pebble Companion App/Pods-Drink My Pebble Companion App.release.xcconfig"; sourceTree = "<group>"; };
+		F08253C22A15CA80DDE51272 /* PebbleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PebbleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158309C06745C3DF0CA5B948 /* PebbleKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1DCE61371F6D86F3007EFCE0 /* Drink My Pebble Companion App */,
 				1DCE61361F6D86F3007EFCE0 /* Products */,
+				D7371C4FBA1CED0F81B880F2 /* Pods */,
+				52C7C99C40997E4712D884FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Drink My Pebble Companion App";
 			sourceTree = "<group>";
 		};
+		52C7C99C40997E4712D884FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F08253C22A15CA80DDE51272 /* PebbleKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7371C4FBA1CED0F81B880F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				527C98C89B8BC5BBB4685785 /* Pods-Drink My Pebble Companion App.debug.xcconfig */,
+				D68033CC9A3C1AB059656995 /* Pods-Drink My Pebble Companion App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DCE614A1F6D86F4007EFCE0 /* Build configuration list for PBXNativeTarget "Drink My Pebble Companion App" */;
 			buildPhases = (
+				C87CDB82BC3F22255AF9398B /* [CP] Check Pods Manifest.lock */,
 				1DCE61311F6D86F3007EFCE0 /* Sources */,
 				1DCE61321F6D86F3007EFCE0 /* Frameworks */,
 				1DCE61331F6D86F3007EFCE0 /* Resources */,
+				B972382F84FE761850C67A9A /* [CP] Embed Pods Frameworks */,
+				83E296A1ECD8011FC760B1AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83E296A1ECD8011FC760B1AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Drink My Pebble Companion App/Pods-Drink My Pebble Companion App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B972382F84FE761850C67A9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Drink My Pebble Companion App/Pods-Drink My Pebble Companion App-frameworks.sh",
+				"${PODS_ROOT}/PebbleKit/PebbleKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PebbleKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Drink My Pebble Companion App/Pods-Drink My Pebble Companion App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C87CDB82BC3F22255AF9398B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Drink My Pebble Companion App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DCE61311F6D86F3007EFCE0 /* Sources */ = {
@@ -268,6 +349,7 @@
 		};
 		1DCE614B1F6D86F4007EFCE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 527C98C89B8BC5BBB4685785 /* Pods-Drink My Pebble Companion App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29MH628E37;
@@ -282,6 +364,7 @@
 		};
 		1DCE614C1F6D86F4007EFCE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68033CC9A3C1AB059656995 /* Pods-Drink My Pebble Companion App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29MH628E37;
@@ -313,6 +396,7 @@
 				1DCE614C1F6D86F4007EFCE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
