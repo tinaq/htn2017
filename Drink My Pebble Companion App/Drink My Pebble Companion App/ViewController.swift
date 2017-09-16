@@ -12,9 +12,11 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     var currNumShots: Int = 0
     var maxNumShots: Int = 0
+    var orderUberEndpoint = "https://jsonplaceholder.typicode.com/posts"
     var locationManager = CLLocationManager()
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+    @IBOutlet var outputTextField: UILabel!
     
     func httpPost(endpoint: String, jsonData: Data) {
         if !jsonData.isEmpty {
@@ -48,11 +50,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             //
             //
             let myData = "title=test&body=testbody&userId=101"
-            httpPost(endpoint: "https://jsonplaceholder.typicode.com/posts",
+            httpPost(endpoint: orderUberEndpoint,
                      jsonData: myData.data(using: .utf8)!)
-            print("I'm calling you an Uber")
-        } else {
-            print("You're under control")
+            outputTextField.text = "You're drunk, calling you an Uber"
         }
     }
     
@@ -65,22 +65,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         isShotsExceedLimit(numShots: currNumShots, maxShots: maxNumShots)
     }
     
-    @IBOutlet var testTextField: UILabel!
     @IBOutlet var DrinkLimitTextField: UITextField!
     
     @IBOutlet var confirmButton: UIButton!
     
     @IBAction func maxShotsConfirmed() {
         if (DrinkLimitTextField.text == "") {
-            print("Type in something asshole!")
+            outputTextField.text = "Type in something asshole!"
             return
-        }
-        if (maxNumShots == 0) {
-            testTextField.text = "You haven't set shots limit yet. Please set it."
-            return;
         }
         
         self.maxNumShots = Int(DrinkLimitTextField.text!)!
+        
+        if (maxNumShots <= 0) {
+            outputTextField.text = "Invalid shots limit."
+            return;
+        }
+        
+        outputTextField.text = ""
         onShotsCnt()
     }
     

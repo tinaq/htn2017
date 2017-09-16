@@ -36,10 +36,10 @@
                                     <action selector="maxShotsConfirmed" destination="BYZ-38-t0r" eventType="touchUpInside" id="GB0-PO-a71"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWP-SX-sl9">
-                                <rect key="frame" x="40" y="216" width="241" height="133"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lth-qn-IVc">
+                                <rect key="frame" x="48" y="194" width="224" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,7 +49,7 @@
                     <connections>
                         <outlet property="DrinkLimitTextField" destination="Wta-Zi-EoI" id="vCA-X6-r4I"/>
                         <outlet property="confirmButton" destination="zUn-6Q-1x7" id="r08-63-s22"/>
-                        <outlet property="testTextField" destination="KWP-SX-sl9" id="4gV-5V-RIA"/>
+                        <outlet property="outputTextField" destination="Lth-qn-IVc" id="OzU-x2-NYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
