@@ -1,0 +1,21 @@
+{
+    "author": "mariafrancinelapid@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "accel_event_recorder",
+    "pebble": {
+        "displayName": "accel_event_recorder",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "uuid": "72a2bcff-7318-487f-b784-1c4f3463ffb0",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
