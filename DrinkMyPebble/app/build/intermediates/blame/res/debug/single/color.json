@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\color\\abc_secondary_text_material_light.xml"
+    }
+]

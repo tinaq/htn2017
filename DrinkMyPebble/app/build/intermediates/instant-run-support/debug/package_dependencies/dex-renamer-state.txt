@@ -1,0 +1,19 @@
+#Sun Sep 17 04:00:23 CST 2017
+renamed.5=classes2.dex
+renamed.4=classes3.dex
+renamed.3=classes6.dex
+renamed.2=classes.dex
+renamed.1=classes4.dex
+renamed.0=classes5.dex
+base.5=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_64184ef9a259cbe3ec08855d995403a041b9fceb
+base.4=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_9bff307770e74cc43fdd3aad92159573ed9a3b91
+base.3=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.1.1_7ab86d1fd9196c047b58ee7687593bbfbc503905
+base.2=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_34bb69f648a69bf5144b0af78e254ba42e28d1f8
+base.1=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fa99709b85bb122b4df946eafcf7aee9b37dd764
+base.0=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.1.1_09fc01c028ecc8de9480748b00b4cc7e836e1e2e
+file.5=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_64184ef9a259cbe3ec08855d995403a041b9fceb\\classes.dex
+file.4=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_9bff307770e74cc43fdd3aad92159573ed9a3b91\\classes.dex
+file.3=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.1.1_7ab86d1fd9196c047b58ee7687593bbfbc503905\\classes.dex
+file.2=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_34bb69f648a69bf5144b0af78e254ba42e28d1f8\\classes.dex
+file.1=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fa99709b85bb122b4df946eafcf7aee9b37dd764\\classes.dex
+file.0=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.1.1_09fc01c028ecc8de9480748b00b4cc7e836e1e2e\\classes.dex

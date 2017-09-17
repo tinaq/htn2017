@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\targetanimation.xml",
+        "source": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\src\\main\\res\\anim\\targetanimation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Reimu\\.android\\build-cache\\4b6351906f8d8fe0d7b4642703b5db911e19fb37\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    }
+]

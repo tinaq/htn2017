@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\.android\build-cache\c7768847b6f6ebc6253be60c4894f4746d1d2de6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bd72bf60a6e56573eecb0e6abf419fac2b1fc1e6">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_64184ef9a259cbe3ec08855d995403a041b9fceb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_7ab86d1fd9196c047b58ee7687593bbfbc503905\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c7d295ba0971eb6527144565cf8e224034f9465e">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f5860730f4e10bea819e8b265cc4db1b83e5ed9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\.android\build-cache\b00e8cf9a6b973cfa90722efb7590bd356f0cec9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fa99709b85bb122b4df946eafcf7aee9b37dd764\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\.android\build-cache\b00e8cf9a6b973cfa90722efb7590bd356f0cec9\output\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_09fc01c028ecc8de9480748b00b4cc7e836e1e2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\.android\build-cache\4b6351906f8d8fe0d7b4642703b5db911e19fb37\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_34bb69f648a69bf5144b0af78e254ba42e28d1f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\.android\build-cache\89ac019d06efdc3d9a01e3fea3509c18234973b3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9bff307770e74cc43fdd3aad92159573ed9a3b91\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\Reimu\Desktop\DrinkMyPebble\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_93953a8e38301ab939a5a9ad3c4fdbd4d5808cb1\classes.dex" />
+    </item>
+
+</items>

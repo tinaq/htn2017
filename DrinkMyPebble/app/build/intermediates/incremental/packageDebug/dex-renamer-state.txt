@@ -1,0 +1,7 @@
+#Sun Sep 17 04:06:58 CST 2017
+base.0=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_93953a8e38301ab939a5a9ad3c4fdbd4d5808cb1
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f5860730f4e10bea819e8b265cc4db1b83e5ed9e\\classes.dex
+base.1=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f5860730f4e10bea819e8b265cc4db1b83e5ed9e
+file.0=C\:\\Users\\Reimu\\Desktop\\DrinkMyPebble\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_93953a8e38301ab939a5a9ad3c4fdbd4d5808cb1\\classes.dex
