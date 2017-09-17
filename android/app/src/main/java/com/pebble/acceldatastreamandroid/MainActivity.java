@@ -1,5 +1,6 @@
 package com.pebble.acceldatastreamandroid;
 
+import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -128,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
             public void receiveData(Context context, int transactionId, PebbleDictionary data) {
                 PebbleKit.sendAckToPebble(context, transactionId);
                 taken++;
+                updateText(cur);
                 if(taken>numShots) {
                     callUber();
                 }
@@ -167,15 +169,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void runAnimation(EditText e) {
-        Animation a = AnimationUtils.loadAnimation(this, R.anim.targetanimation);
-        a.setRepeatMode(Animation.REVERSE);
-        a.setRepeatCount(-1);
-        e.clearAnimation();
-        e.startAnimation(a);
-    }
-
-
     public void animate (View view) {
         Animation a = AnimationUtils.loadAnimation(this, R.anim.targetanimation);
         a.setRepeatCount(-1);
@@ -195,5 +188,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         view.setAnimation(a);
+    }
+    public void updateText(TextView t){
+        t.setText(Integer.toString(taken));
+        double percent = taken/numShots;
+
+        if(percent<0.4){
+            t.setTextColor(Color.parseColor("#008000"));
+        }
+        else if(percent<0.8){
+            t.setTextColor(Color.parseColor("#ffff33"));
+        }
+        else{
+            t.setTextColor(Color.parseColor("#FF0000"));
+        }
     }
 }
