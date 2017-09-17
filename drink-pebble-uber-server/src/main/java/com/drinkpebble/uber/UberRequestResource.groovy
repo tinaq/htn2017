@@ -157,10 +157,16 @@ class UberRequestResource {
         log.info("ride id: $rideId");
         log.info("ride status: $ride.status")
         log.info("")
-        log.info("ETA: $ride.destination.eta ")
-        log.info("The Driver's name is $ride.driver.name and his rating is $ride.driver.rating")
-        log.info("They are driving a vehicle with make $ride.vehicle.make and model $ride.vehicle.model")
-        log.info("You can look at it here: $ride.vehicle.pictureUrl")
+        if(ride.destination){
+            log.info("ETA: $ride.destination.eta ")
+        }
+        if(ride.driver){
+            log.info("The Driver's name is $ride.driver.name and his rating is $ride.driver.rating")
+        }
+        if(ride.vehicle){
+            log.info("They are driving a vehicle with make $ride.vehicle.make and model $ride.vehicle.model")
+            log.info("You can look at it here: $ride.vehicle.pictureUrl")
+        }
 
         sleep(30000)
 
