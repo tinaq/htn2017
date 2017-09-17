@@ -4,8 +4,14 @@ import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,18 +42,17 @@ public class MainActivity extends AppCompatActivity {
     // UUID must match that of the watchapp
     private static final UUID APP_UUID = UUID.fromString("bb039a8e-f72f-43fc-85dc-fd2516c7f328");
 
-    private static final int SAMPLES_PER_UPDATE = 5;   // Must match the watchapp value
-    private static final int ELEMENTS_PER_PACKAGE = 3;
 
     private ActionBar mActionBar;
     private EditText shots;
     int numShots;
     int taken= 0;
+    ScaleAnimation mAnimation;
+    TextView cur;
 
     private PebbleKit.PebbleDataReceiver mDataReceiver;
     RequestQueue queue;
     public static class NukeSSLCerts {
-        protected static final String TAG = "NukeSSLCerts";
 
         public static void nuke() {
             try {
@@ -89,15 +94,25 @@ public class MainActivity extends AppCompatActivity {
         nuke.nuke();
 
         mActionBar = getSupportActionBar();
-        mActionBar.setTitle("AccelDataStream");
+        mActionBar.setTitle("Drink My Pebble");
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.actionbar);
 
         shots = (EditText) findViewById(R.id.shots);
-        RelativeLayout rl = (RelativeLayout)findViewById(R.id.outside);
+        final RelativeLayout rl = (RelativeLayout)findViewById(R.id.outside);
         rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 numShots = Integer.parseInt(shots.getText().toString());
                 shots.setText(Integer.toString(numShots));
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(rl.getWindowToken(), 0);
+                shots.setFocusable(false);
+                animate(shots);
+                cur = new TextView(MainActivity.this);
+                cur.setText(Integer.toString(taken));
+
+
             }
         });
 
@@ -133,9 +148,8 @@ public class MainActivity extends AppCompatActivity {
         JSONObject jsonObject = new JSONObject(params);
         va va = new va(jsonObject);
         queue.add(va.jsonObjectRequest);
-
-
-
+        TextView tv = (TextView)findViewById(R.id.uber);
+        tv.setText("calling an Uber");
     }
     @Override
     protected void onPause() {
@@ -150,5 +164,36 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    public void runAnimation(EditText e) {
+        Animation a = AnimationUtils.loadAnimation(this, R.anim.targetanimation);
+        a.setRepeatMode(Animation.REVERSE);
+        a.setRepeatCount(-1);
+        e.clearAnimation();
+        e.startAnimation(a);
+    }
+
+
+    public void animate (View view) {
+        Animation a = AnimationUtils.loadAnimation(this, R.anim.targetanimation);
+        a.setRepeatCount(-1);
+        a.setInterpolator(new AccelerateInterpolator());
+        a.setAnimationListener(new Animation.AnimationListener(){
+
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        view.setAnimation(a);
     }
 }

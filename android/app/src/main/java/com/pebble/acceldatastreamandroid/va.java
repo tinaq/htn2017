@@ -25,57 +25,58 @@ public class va {
 
     JSONObject jsonObject;
     String url = "https://ec2-34-214-3-186.us-west-2.compute.amazonaws.com:8080/uber-req/gohome";
+    String url2 = "http://jsonplaceholder.typicode.com/posts";
 
-
+    JsonObjectRequest jsonObjectRequest;
 
 
     va(JSONObject object){
         jsonObject = object;
-        Log.d("aaa",object.toString());
-    }
-    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
-            new Response.Listener<JSONObject>(){
-                @Override
-                public void onResponse(JSONObject response) {
-                    Log.e("Response", response.toString());
-                    try {
-                        JSONArray arrData = response.getJSONArray("data");
+      jsonObjectRequest =  new JsonObjectRequest(Request.Method.POST, url, jsonObject,
+                new Response.Listener<JSONObject>(){
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.e("Response", "aaa" + response.toString());
+                        try {
+                            JSONArray arrData = response.getJSONArray("data");
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            },
-            new Response.ErrorListener(){
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e("Error.Response", error.toString());
-                    String json = null;
-                    NetworkResponse response = error.networkResponse;
-                    if(response != null && response.data != null){
-                        switch(response.statusCode){
-                            case 400:
-
-                                json = new String(response.data);
-                                System.out.println(json);
-                                break;
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                        //Additional cases
                     }
-                }
-            })
-    {
-        @Override
-        public Map<String, String> getHeaders() throws AuthFailureError {
-            HashMap<String, String> headers = new HashMap<>();
-            headers.put("content-type", "application/json");
-            headers.put("Accept","application/json");
-            Log.d("headers", headers.toString());
-            return headers;
-        }
+                },
+                new Response.ErrorListener(){
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Error.Response", error.toString());
+                        String json = null;
+                        NetworkResponse response = error.networkResponse;
+                        if(response != null && response.data != null){
+                            switch(response.statusCode){
+                                case 400:
+
+                                    json = new String(response.data);
+                                    System.out.println("400"+ json);
+                                    break;
+                            }
+                            //Additional cases
+                        }
+                    }
+                })
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<>();
+            //   headers.put("content-type", "application/json");
+               headers.put("Accept","application/json");
+                Log.d("headers", headers.toString());
+                return headers;
+            }
 
 
 
-    };
+        };
+
+    }
 
 }
