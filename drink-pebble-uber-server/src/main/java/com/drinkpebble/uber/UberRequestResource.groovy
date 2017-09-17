@@ -12,6 +12,7 @@ import com.uber.sdk.rides.client.model.Product
 import com.uber.sdk.rides.client.model.Ride
 import com.uber.sdk.rides.client.model.RideEstimate
 import com.uber.sdk.rides.client.model.RideRequestParameters
+import com.uber.sdk.rides.client.model.SandboxRideRequestParameters
 import com.uber.sdk.rides.client.model.UserProfile
 import com.uber.sdk.rides.client.services.RidesService
 import groovy.util.logging.Slf4j
@@ -155,6 +156,31 @@ class UberRequestResource {
 
         log.info("Ride created.")
         log.info("ride id: $rideId");
+        logRide(ride)
+
+        log.info("Driver accepting ride")
+        SandboxRideRequestParameters rideParameters = new SandboxRideRequestParameters.Builder().setStatus("accepted").build()
+        Response<Void> updResponse = service.updateSandboxRide(rideId, rideParameters).execute();
+        if(updResponse.errorBody()){
+            log.error("Not response when trying to update ride request to 'accepted'")
+        }
+        //sleep(30000)
+
+        Ride rideUpdate = service.getRideDetails(rideId).execute().body();
+        logRide(rideUpdate);
+
+        Response<Void> cancelResponse = service.cancelRide(rideId).execute();
+        if(cancelResponse.errorBody() == null){
+            log.info("Cancelled ride")
+        }else{
+            log.error("Failed to cancel ride!")
+        }
+
+        return javax.ws.rs.core.Response.status(200).build()
+    }
+
+    void logRide(Ride ride){
+        log.info("")
         log.info("ride status: $ride.status")
         log.info("")
         if(ride.destination){
@@ -167,17 +193,7 @@ class UberRequestResource {
             log.info("They are driving a vehicle with make $ride.vehicle.make and model $ride.vehicle.model")
             log.info("You can look at it here: $ride.vehicle.pictureUrl")
         }
-
-        sleep(30000)
-
-        Response<Void> cancelResponse = service.cancelRide(rideId).execute();
-        if(cancelResponse.errorBody() == null){
-            log.info("Cancelled ride")
-        }else{
-            log.error("Failed to cancel ride!")
-        }
-
-        return javax.ws.rs.core.Response.status(200).build()
+        log.info("")
     }
 
 }
