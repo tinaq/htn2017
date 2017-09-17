@@ -113,8 +113,8 @@ class UberRequestResource {
     @Path("/gohome")
     @Consumes(MediaType.APPLICATION_JSON)
     javax.ws.rs.core.Response submit(RideRequest rideRequest){
-        float latitude = rideRequest.latitude
-        float longitude = rideRequest.longitude
+        float latitude = rideRequest.latitude.toFloat()
+        float longitude = rideRequest.longitude.toFloat()
         log.info("Received request for uber ride home with latitude $latitude and longitude $longitude")
         //float latitude = 43.472163
         //float longitude = -80.540497
