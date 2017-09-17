@@ -22,6 +22,7 @@ import javax.ws.rs.Consumes
 import javax.ws.rs.GET
 import javax.ws.rs.POST
 import javax.ws.rs.Path
+import javax.ws.rs.Produces
 import javax.ws.rs.QueryParam
 import javax.ws.rs.core.MediaType
 
@@ -32,11 +33,11 @@ class UberRequestResource {
     ServerTokenSession serverSession
     ApplicationConfiguration configuration
 
-    // works for one user. replace with map of things / database thing
+    // works for one user. replace with map of things / database call
     OAuth2Credentials credentials
     SessionConfiguration userSessionConfig
     Credential credential
-
+    String rideId
 
     UberRequestResource(ServerTokenSession session, ApplicationConfiguration configuration){
         this.serverSession = session
@@ -101,6 +102,23 @@ class UberRequestResource {
         return profileResponse.body().email
     }
 
+    @GET
+    @Path("/ride-eta")
+    @Produces(MediaType.APPLICATION_JSON)
+    Integer getRideEta(){
+        log.info("Getting ride update for ride id $rideId")
+        CredentialsSession session = new CredentialsSession(userSessionConfig, credential)
+        RidesService service = UberRidesApi.with(session).build().createService()
+        Ride rideUpdate = service.getRideDetails(rideId).execute().body();
+        if(!rideUpdate || !rideUpdate.pickup){
+            log.error("Failed to get ride update")
+            return null
+        }
+        else{
+            return rideUpdate.pickup.eta
+        }
+    }
+
     @POST
     @Path("/cancel-ride")
     void cancelRide(){
@@ -137,6 +155,7 @@ class UberRequestResource {
         RideEstimate rideEstimate = service.estimateRide(rideRequestParametersEstimate).execute().body()
 
         if(!rideEstimate){
+            log.error("Failed to get ride estimate")
             return javax.ws.rs.core.Response.status(403).entity(rideEstimate).build()
         }
         log.info("Got estimate for uber ride")
@@ -152,10 +171,14 @@ class UberRequestResource {
             .setDropoffCoordinates(destLatitude, destLongitude)
             .build()
         Ride ride = service.requestRide(rideRequestParameters).execute().body()
-        String rideId = ride.rideId
+        if(!ride){
+            log.error("Failed to order ride")
+            return javax.ws.rs.core.Response.status(403).entity(rideEstimate).build()
+        }
+        rideId = ride.rideId
 
         log.info("Ride created.")
-        log.info("ride id: $rideId");
+        log.info("ride id: $rideId")
         logRide(ride)
 
         log.info("Driver accepting ride")
@@ -163,18 +186,23 @@ class UberRequestResource {
         Response<Void> updResponse = service.updateSandboxRide(rideId, rideParameters).execute();
         if(updResponse.errorBody()){
             log.error("Not response when trying to update ride request to 'accepted'")
+            return javax.ws.rs.core.Response.status(403).entity(rideEstimate).build()
         }
+
         //sleep(30000)
 
         Ride rideUpdate = service.getRideDetails(rideId).execute().body();
         logRide(rideUpdate);
 
+        /*
         Response<Void> cancelResponse = service.cancelRide(rideId).execute();
         if(cancelResponse.errorBody() == null){
             log.info("Cancelled ride")
         }else{
             log.error("Failed to cancel ride!")
+            return javax.ws.rs.core.Response.status(403).entity(rideEstimate).build()
         }
+        */
 
         return javax.ws.rs.core.Response.status(200).build()
     }

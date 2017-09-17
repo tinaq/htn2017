@@ -60,8 +60,8 @@
       <file leaf-file-name="UberRequestResource.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/drinkpebble/uber/UberRequestResource.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="113" column="43" lean-forward="false" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
               <folding>
                 <element signature="e#30#74#0" expanded="true" />
               </folding>
@@ -104,6 +104,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sleep</find>
+      <find>rideId</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -626,12 +627,12 @@
       <updated>1505540163869</updated>
       <workItem from="1505540166585" duration="12458000" />
       <workItem from="1505578747767" duration="25932000" />
-      <workItem from="1505629869504" duration="2059000" />
+      <workItem from="1505629869504" duration="2974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40449000" />
+    <option name="totallyTimeSpent" value="41364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
@@ -920,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/drinkpebble/uber/UberRequestResource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="165" column="8" lean-forward="false" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="113" column="43" lean-forward="false" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
           <folding>
             <element signature="e#30#74#0" expanded="true" />
           </folding>
