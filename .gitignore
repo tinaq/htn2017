@@ -1,6 +1,10 @@
-# Ignore DS_Store
+*.iml
+.gradle
+./local.properties
+.idea/workspace.xml
+.idea/libraries
 .DS_Store
-
-# Ignore podfile
-Podfile.lock
-Drink\ My\ Pebble\ Companion\ App/Pods/*
+./build
+/build
+/captures
+workspace.xml
